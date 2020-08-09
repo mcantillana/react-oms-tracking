@@ -1,0 +1,320 @@
+/*------------------------------------
+ * # Style Landing Cyber
+------------------------------------*/
+
+/**
+ * ## Importación de Fuentes
+ */
+@font-face {
+	font-family: "Avenir Black";
+	src: url("../fonts/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+	font-family: "Avenir Book";
+	src: url("../fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+	font-family: "Avenir Roma";
+	src: url("../fonts/AvenirLTStd-Roman.otf");
+}
+
+/**
+ * ## Variables Globales
+ */
+:root {
+	font-size: 20px;
+
+	--avenir-black: 'Avenir Black';
+	--avenir-book: 'Avenir Book';
+	--avenir-roma: 'Avenir Roma';
+
+	--orange-circle: hsl(18, 94%, 59%);
+	--yellow-circle: hsl(40, 91%, 60%);
+	--gray-circle: hsl(240, 2%, 75%);
+	--gray-light: hsl(266, 5%, 74%);
+	--gray-dark: hsl(258, 5%, 50%);
+	--black: hsl(250, 4%, 28%);
+
+	--color-circle: var(--gray-circle);
+	--color-line: var(--gray-circle);
+}
+
+/**
+ * ## Styled Custom
+ */
+/* General Style */
+.color-orange {
+	color: var(--orange-circle) !important;
+}
+
+.color-yellow {
+	color: var(--yellow-circle);
+}
+
+.color-gray {
+	color: var(--gray-circle);
+}
+
+.bg-orange {
+	background-color: var(--orange-circle);
+}
+
+.bg-yellow {
+	background-color: var(--yellow-circle);
+}
+
+.bg-gray {
+	background-color: var(--gray-circle);
+}
+
+.purchase-traking {
+	color: var(--black);
+	font-family: var(--avenir-roma);
+}
+
+.purchase-traking__insert-info {
+	color: var(--black);
+}
+
+/**
+ * ## Section Information Style
+ */
+.information {
+	width: 100%;
+}
+
+.information__title,
+.traking__title {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	margin-left: .4rem;
+	margin-top: 2rem;
+}
+
+.information__title {
+	font-family: var(--avenir-black);
+}
+
+.information__boxes,
+.information__box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.information__boxes {
+	padding: 1rem 0;
+}
+
+.information__box {
+	grid-template-columns: .6fr 2fr;
+	align-items: center;
+}
+
+.information__img {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.information__text {
+	color: var(--gray-light);
+	line-height: 1rem;
+	font-size: .65rem;
+}
+
+/**
+ * ## Section Traking Style
+ */
+.traking__title {
+	font-weight: normal;
+}
+
+.traking__title .fas {
+	margin-right: .4rem;
+	font-size: .8rem;
+}
+
+.traking__text {
+	padding: .5rem;
+	font-size: .7rem;
+}
+
+.traking__states {
+	padding: .5rem;
+}
+
+.traking__state {
+	display: grid;
+	grid-template-columns: .1fr 1fr;
+}
+
+.traking__state__icon {
+	font-size: 1.65rem;
+	margin-right: .5rem;
+}
+
+.traking__state__date,
+.traking__state__title {
+	margin: 0;
+	padding: 0;
+}
+
+.traking__state__left__start .fas,
+.traking__state__left__complete .fas,
+.traking__state__left__end .complete {
+	color: var(--orange-circle);
+}
+
+.traking__state__left__pending .fas,
+.traking__state__left__end .pending {
+	color: var(--yellow-circle);
+}
+
+.traking__state__left__inactive .fas,
+.traking__state__left__end .inactive {
+	color: var(--gray-circle);
+}
+
+.traking__state__left__start,
+.traking__state__left__complete,
+.traking__state__left__end,
+.traking__state__left__pending,
+.traking__state__left__inactive {
+	margin: 0 auto;
+	position: relative;
+	max-width: 100px;
+}
+
+.traking__state__left__start::before,
+.traking__state__left__complete::before,
+.traking__state__left__pending::before,
+.traking__state__left__inactive::before {
+	content: "";
+	position: absolute;
+	width: 4px;
+	background-color: var(--orange-circle);
+	height: 2.5rem;
+	top: -2.45rem;
+	right: 1.25rem;
+	z-index: -1;
+}
+
+.traking__state__left__start::before {
+	background-color: var(--gray-circle);
+}
+
+.traking__state__left__complete::before {
+	background-color: var(--orange-circle);
+}
+
+.traking__state__left__pending::before,
+.traking__state__left__inactive::before {
+	background-color: var(--gray-circle);
+}
+
+.traking__state__date {
+	font-size: 0.57rem;
+	color: var(--gray-dark);
+}
+
+.traking__state__title {
+	font-family: var(--avenir-black);
+	font-size: .7rem;
+	margin-bottom: 2rem;
+}
+
+
+/**
+ * ## Media Queries
+ */
+@media screen and (min-width: 720px) {
+	.purchase-traking {
+		font-size: .8rem;
+	}
+
+	.purchase-traking__insert-info {
+		color: var(--gray-light);
+	}
+
+	.information__br {
+		display: none;
+	}
+
+	.information__boxes {
+		display: flex;
+	}
+
+	.information__box {
+		margin-right: 2rem;
+	}
+
+	.information__title {
+		font-size: 1.25rem;
+	}
+
+	.information__text {
+		color: var(--black);
+		font-size: .75rem;
+	}
+
+	.traking__title {
+		font-family: var(--avenir-black);
+	}
+
+	.traking__states {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.traking__state {
+		grid-template-columns: 1fr;
+		margin: 0 auto;
+	}
+
+	.traking__text {
+		margin-bottom: 4rem;
+	}
+
+	.traking__state__right {
+		max-width: 125px;
+		max-height: 100px;
+		text-align: center;
+	}
+
+	.traking__state__left::before,
+	.traking__state__left__start::before,
+	.traking__state__left__complete::before,
+	.traking__state__left__pending::before,
+	.traking__state__left__inactive::before {
+		transform: rotate(90deg);
+		height: 5.5rem;
+		top: -2rem;
+		right: -2.2rem;
+	}
+
+	.traking__state__title {
+		font-size: .65rem;
+	}
+
+	.traking__state__date {
+		margin-top: 2rem;
+		margin-bottom: .5rem;
+	}
+
+	.traking__state__deco {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.traking__state__left::before,
+	.traking__state__left__start::before,
+	.traking__state__left__complete::before,
+	.traking__state__left__pending::before,
+	.traking__state__left__inactive::before {
+		height: 9.6rem;
+		top: -3.9rem;
+		right: 6.8rem;
+	}
+}
