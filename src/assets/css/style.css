@@ -214,6 +214,7 @@
 }
 
 .traking__state__date {
+	min-height: 0.8rem;
 	font-size: 0.57rem;
 	color: var(--gray-dark);
 }

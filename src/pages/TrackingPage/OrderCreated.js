@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const OrderCreated = props => {
-
+    console.log('date', props.date)
     const date = new Date(props.date); 
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const purchase_date = date.toLocaleDateString('es-CL', options)

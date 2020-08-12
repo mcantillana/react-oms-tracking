@@ -16,13 +16,11 @@ import { Spinner } from '../../components/common/Spinner';
     
     useEffect(() => {
       
-      setLoading(true);
-      console.log(JSON.parse(atob(tracking_params)));
-      
+      setLoading(true);    
 
       getTracking(JSON.parse(atob(tracking_params))).then(
         (response) => {
-          console.log(response);
+          console.log('data: ', response.data);
           setLoading(false);
           setTracking(response.data);
         },

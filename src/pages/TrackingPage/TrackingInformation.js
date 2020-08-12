@@ -9,7 +9,7 @@ export const TrackingInformation = ({ tracking }) => {
             tracking && 
             <section className="information">
                 <div className="information__boxes">
-                    <OrderCreated date={tracking.order_created} />
+                    <OrderCreated date={tracking.order_date} />
                     <ShippingMethod shipping_method={tracking.shipping_method} />
                 </div>
                 <hr />
