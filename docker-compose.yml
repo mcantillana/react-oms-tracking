@@ -1,0 +1,14 @@
+version: "3"
+# docker build --build-arg BASE_API_URL=https://oms-qa.d2.e2l.dev/sales/order/track -t oms/tracking:latest .docker build --build-arg BASE_API_URL=https://oms-qa.d2.e2l.dev/sales/order/track -t oms/tracking:latest .
+services:
+  web:
+    image: oms/tracking:latest
+    environment:
+      - VIRTUAL_HOST=oms-tracking.des
+    networks:
+      - react-oms
+networks:
+  react-oms:
+    external:
+      name: nginx-proxy
+    
