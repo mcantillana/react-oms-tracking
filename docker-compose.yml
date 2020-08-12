@@ -4,7 +4,9 @@ services:
   web:
     image: oms/tracking:latest
     environment:
-      - VIRTUAL_HOST=oms-tracking.des
+      - VIRTUAL_HOST=oms-tracking.d2.e2l.dev
+      - LETSENCRYPT_HOST=oms-tracking.d2.e2l.dev
+      - LETSENCRYPT_EMAIL=ecommerce@linets.cl
     networks:
       - react-oms
 networks:
