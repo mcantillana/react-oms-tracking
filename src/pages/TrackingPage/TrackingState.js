@@ -7,10 +7,12 @@ export const TrackingState = (props) => {
     track_stage,
     track_status,
   } = props.status_history;
-
+  
+  const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const created = track_date 
-    ? new Date(track_date).toLocaleString() 
+    ? new Date(track_date).toLocaleDateString('es-CL', options) 
     : false;
+
 
   return (
     <div className="traking__state">
